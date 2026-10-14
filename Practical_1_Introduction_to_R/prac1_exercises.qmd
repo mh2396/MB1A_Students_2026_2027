@@ -1,0 +1,41 @@
+---
+title: "prac1_exercises"
+author: "Mika Haber"
+format: html
+---
+
+```{r}
+# using functions exercise
+round(3.14159)
+round (3.14159, digits = 2)
+print(seq(5,15,5))
+```
+```{r}
+# argument order exercise
+print(rep(5, 7))
+```
+```{r}
+# character, numerical, logical
+x <- "hello"
+print(x)
+print(class(x))
+y <- 85
+print(y)
+print(class(y))
+z <- TRUE
+print(z)
+print(class(z))
+```
+```{r}
+# variables of diff types
+cell_ID_1 <- "CX1"
+cell_ID_2 <- "CX2"
+treated_1 <- TRUE
+treated_2 <- FALSE
+cells_before_1 <- 5415
+cells_before_2 <- 8123
+cells_after_1 <- 1432
+cells_after_2 <- 7543
+```
+
+
