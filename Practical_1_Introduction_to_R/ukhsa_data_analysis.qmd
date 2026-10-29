@@ -3,9 +3,10 @@ title: "uksha_data_analysis"
 author: "M Haber"
 ---
 
+
+```{r}
 library(tidyverse)
 library(gt)
-```{r}
 antibiotic <- read_csv("data/ukhsa-chart-download.csv")
 gt(head(antibiotic))
 ```
