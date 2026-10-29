@@ -38,4 +38,19 @@ cells_after_1 <- 1432
 cells_after_2 <- 7543
 ```
 
+library(tidyverse)
+library(gt)
+```{r}
+# vectors
+cell_ID_vec <- c(cell_ID_1, cell_ID_2)
+treated_vec <- c(treated_1, treated_2)
+n_before_vec <- c(cells_before_1, cells_before_2)
+n_after_vec <- c(cells_after_1, cells_after_2)
+```
+```{r}
+# indexing
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+my_fav_pet <- all_my_pets[4]
+print(my_fav_pet)
+```
 

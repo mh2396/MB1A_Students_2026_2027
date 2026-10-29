@@ -1,0 +1,22 @@
+---
+title: "uksha_data_analysis"
+author: "M Haber"
+---
+
+library(tidyverse)
+library(gt)
+```{r}
+antibiotic <- read_csv("data/ukhsa-chart-download.csv")
+gt(head(antibiotic))
+```
+```{r}
+ggplot(antibiotic, aes(
+  x = date,
+  y = metric_value
+)) +
+  geom_line(colour = "blue") + 
+  xlab("Date") +
+  ylab("DID (standardised antibiotic consumption)") + 
+  ggtitle("Antibiotic consumption by date")
+```
+
