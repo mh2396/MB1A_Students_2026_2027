@@ -1,0 +1,43 @@
+---
+title: "prac2_exercises"
+editor: visual
+---
+
+```{r}
+input_vec <- c(5, -10, 4, -3)
+output_var <- mean(input_vec) |>
+  abs() |>
+  round()
+print(output_var)
+```
+
+```{r}
+y <- 12
+print(y == 7)
+print(y < 15)
+print(y > 20)
+print(y <= 12)
+```
+
+
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

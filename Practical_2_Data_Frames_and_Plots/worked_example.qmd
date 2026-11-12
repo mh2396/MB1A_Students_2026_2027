@@ -31,19 +31,45 @@ bird_breeding_selected <- breeding_site_locations |>
 gt(bird_breeding_selected)
 ```
 ```{r}
-b_migration_site <- read_csv("data/migratory_connectivity_dataset.csv")
-spec(b_migration_site)
+library(gt)
+library(tidyverse)
+library(maps)
+migration_site_locations <- read_csv("data/migratory_connectivity_dataset.csv")
+
+migration_site_selected <- migration_site_locations |>
+  select( 
+    Site,
+    winterLongitude,
+    winterLatitude,
+    pslon,
+    pslat,
+    iblon,
+    iblat,
+    awestlon,
+    awestlat
+  ) |>
+  distinct() |>
+  rename(
+    Winter_Longitude = winterLongitude,
+    Winter_Latitude = winterLatitude,
+    Stopover_Longitude = pslon,
+    Stopover_Latitude = pslat,
+    Iberian_Longitude = iblon,
+    Iberian_Latitude = iblat,
+    Westmost_Longitude = awestlon,
+    Westmost_Latitude = awestlat
+  )
+gt(head(migration_site_selected))
+
 ```
 
 
 ```{r}
-b_migration_site <- read_csv("data/migratory_connectivity_dataset.csv")
+bird_breeding_exc <- breeding_site_locations |> filter(Site != "Spain")
+gt(bird_breeding_exc)
 
-b_migration_selected <- b_migration_site |>
-  select("winterLongtitude", "winterLatitude", "pslon", "pslat", "iblon", "iblat", "awestlon", "awestlat") |>
-  distinct() |>
-  rename(winterLongtitude = Winter_Longitude, winterLatitude = Winter_Latitude, pslon = Stopover_Longitude, pslat = Stopover_Latitude, iblon = Iberian_Longitude, iblat = Iberian_Latitude, awestlon = Westmost_Longitude, awestlat = Westmost_Latitude)
-
-gt(b_migration_selected)  
+bird_migration_exc <- migration_site_selected |> filter(Site != "Spain")
+gt(bird_migration_exc)
 ```
+
 
